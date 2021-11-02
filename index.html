@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <title>JS - Twitter like counter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <h1>JS - Twitter like counter</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <form>
+            <div class="form-group">
+              <label for="tweet">Tweet</label>
+              <textarea class="form-control" id="tweet" rows="4"></textarea>
+              <div class="text-danger d-none">
+                Your message must be less than 250 characters!
+                You Have typed <div id="extraChars" style="display: inline;"></div> extra Character<div id="plural" style="display: inline;"></div>!
+              </div>
+              <div>
+                Remaining characters:
+                <strong id="remaining-chars"></strong>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Tweet</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div id="preview"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
