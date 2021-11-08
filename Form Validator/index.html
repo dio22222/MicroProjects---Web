@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <title>JS - Form validation (part 2)</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <h1>JS - Form validation</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <form  action="/path/to/script.php" method="post">
+            <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input
+                type="input"
+                id="email"
+                class="form-control"
+              />
+              <div class="text-danger email-error d-none">
+                Must be a valid email address!
+              </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+              />
+              <div class="text-danger password-error d-none">
+                Password must be more than 4 characters!
+              </div>
+            </div>
+            <button disabled type="submit" class="btn btn-lg btn-primary btn-block">
+              Sign in
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
