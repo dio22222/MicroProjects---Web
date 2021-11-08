@@ -1,0 +1,71 @@
+@font-face {
+	font-family: 'GemunuLibreR';
+	font-weight: 400;
+	src: url('assets/fonts/GemunuLibre-Regular.ttf');
+}
+
+body {
+	background: #292929;
+	color: #dad4d4;
+	font-family: 'GemunuLibreR', sans-serif;
+}
+
+body > footer {
+	border-top: 3px solid #000;
+	color: #d8b5b5;
+}
+
+body > header {
+	box-shadow: 4px 4px 12px 13px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	letter-spacing: 0.1em;
+	line-height: 25px;
+}
+
+body > main > section.main-header h1 {
+	color: #ff8217;
+	border-bottom: 5px solid #4e2323;
+	border-top: 5px solid #344154;
+	font-family: 'Stick No Bills', sans-serif;
+	letter-spacing: 0.2em;
+	font-size: 35px;
+	line-height: 40px;
+	text-align: center;
+	transition: all .5s ease-out;
+}
+
+body > main > section.main-header h1:hover {
+	letter-spacing: 0.5em;
+	transition: all .5s linear;
+}
+
+body > header > nav.main-navigation a,
+body > header > nav.main-navigation a:visited,
+body > header > nav.main-navigation a:focus,
+body > header > nav.main-navigation a:active {
+	color: #6379e4;
+	text-decoration: none;
+}
+
+body > header > nav.main-navigation a:hover{
+	color: #3c53bf;
+	text-decoration: none;
+}
+
+body > header > nav > hr {
+	border: 0;
+	height: 2px;
+	background: #333;
+}
+
+body > header > nav > h3:hover {
+	background-color: #291b1b;
+	line-height: 30px;
+	transition: background-color 0.8s ease-out;
+	transition: line-height 0.3s ease-out;
+}
+
+body > header > nav > h3 {
+	transition: line-height 0.3s ease-out;
+}
+
