@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <title>JS - Calculator</title>
+    <style>
+      .btn {
+        min-width: 100px;
+      }
+      .block {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <h1>JS - Calculator</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <table class="clculator">
+            <tbody>
+              <tr>
+                <td colspan="4">
+                  <input
+                    id="display"
+                    type="text"
+                    disabled
+                    class="form-control"
+                    placeholder="Calculate something!"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button data-num="7" class="num btn btn-primary">
+                    7
+                  </button>
+                </td>
+                <td>
+                  <button data-num="8" class="num btn btn-primary">
+                    8
+                  </button>
+                </td>
+                <td>
+                  <button data-num="9" class="num btn btn-primary">
+                    9
+                  </button>
+                </td>
+                <td>
+                  <button data-num="/" class="num btn btn-primary">
+                    /
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button data-num="4" class="num btn btn-primary">
+                    4
+                  </button>
+                </td>
+                <td>
+                  <button data-num="5" class="num btn btn-primary">
+                    5
+                  </button>
+                </td>
+                <td>
+                  <button data-num="6" class="num btn btn-primary">
+                    6
+                  </button>
+                </td>
+                <td>
+                  <button data-num="*" class="num btn btn-primary">
+                    x
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button data-num="1" class="num btn btn-primary">
+                    1
+                  </button>
+                </td>
+                <td>
+                  <button data-num="2" class="num btn btn-primary">
+                    2
+                  </button>
+                </td>
+                <td>
+                  <button data-num="3" class="num btn btn-primary">
+                    3
+                  </button>
+                </td>
+                <td>
+                  <button data-num="+" class="num btn btn-primary">
+                    +
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button data-num="." class="num btn btn-primary">
+                    .
+                  </button>
+                </td>
+                <td>
+                  <button data-num="0" class="num btn btn-primary">
+                    0
+                  </button>
+                </td>
+                <td>
+                  <button class="clear-btn btn btn-primary">
+                    C
+                  </button>
+                </td>
+                <td>
+                  <button data-num="-" class="num btn btn-primary">
+                    -
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <button class="result-btn btn btn-primary block">
+                    =
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
