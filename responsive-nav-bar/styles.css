@@ -1,0 +1,139 @@
+/* ---- GLOBAL ELEMENTS ----*/
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: black;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 500;
+}
+
+.active {
+	transform: scale(1,1);
+}
+
+.deactivate {
+	transform: scale(1,0);
+	transform-origin: top;
+	transition: transform 200ms ease-in-out;
+}
+
+
+/* ------------------------ */
+
+/* ------- NAV BAR -------- */
+
+.logo {
+	margin: 0.32em 0;
+}
+
+header {
+	background: rgba(0, 214, 170, .85);
+	text-align: center;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	
+}
+
+nav {
+	display: block;
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	left: 0;
+	background: rgba(0, 214, 170, .85);
+	width: 100%;
+	transform: scale(1,0);
+	transform-origin: top;
+	transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	margin-bottom: 1em;
+	margin-left: 1em;
+	transform: scale(1,0);
+	transform-origin: top;
+	transition: transform 1000ms ease-in-out;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	}
+
+nav a:hover {
+	color: #000;
+}
+
+i {
+	color: white;
+	font-size: 1.25em;
+}
+
+.nav-toggle {
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 1em;
+	/*margin-top: 2em;*/
+	/*height: 100%; commented out because it expands the area you can click. added margin top to fix it
+	leaving height as it is for the production because i havent decided the navbar's height and it doesnt
+	stays in relative position*/
+	height: 100%;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+	.nav-toggle {
+		display: none;
+	}
+
+	header {
+		display: grid;
+		grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+
+	}
+
+	.logo {
+		grid-column: 2 / 3;
+	}
+
+	nav {
+		all: unset;
+		grid-column: 3 / 4;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	nav li {
+		transform: scale(1, 1) !important;
+		margin: 0;
+		padding-left: 2.5em;
+	}
+
+	nav ul {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+}
+/* ------------------------ */
