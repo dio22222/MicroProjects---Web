@@ -1,0 +1,230 @@
+/* ---- GLOBAL ELEMENTS ----*/
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 500;
+	background: url(assets/img/Home-Screen3.jpg) no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: grey;
+}
+
+.active {
+	transform: scale(1,1);
+}
+
+.deactivate {
+	transform: scale(1,0);
+	transform-origin: top;
+	transition: transform 200ms ease-in-out;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* ------------------------ */
+
+/* ------- NAV BAR -------- */
+
+.logo {
+	margin: 0.32em 0;
+}
+
+header {
+	background: rgba(70, 75, 142, .85);
+	text-align: center;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	
+}
+
+nav {
+	display: block;
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	left: 0;
+	background: rgba(70, 75, 142, .85);
+	width: 100%;
+	transform: scale(1,0);
+	transform-origin: top;
+	transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	margin-bottom: 1em;
+	margin-left: 1em;
+	transform: scale(1,0);
+	transform-origin: top;
+	transition: transform 425ms ease-in-out;
+
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	}
+
+nav a:hover {
+	color: #000;
+}
+
+nav a:hover::before {
+	content: "";
+	border-top: 5px solid black;
+}
+
+i {
+	color: white;
+	font-size: 1.25em;
+}
+
+.nav-toggle {
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 1em;
+	/*margin-top: 2em;*/
+	/*height: 100%; commented out because it expands the area you can click. added margin top to fix it
+	leaving height as it is for the production because i havent decided the navbar's height and it doesnt
+	 stays in relative position*/
+	height: 100%;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+	.nav-toggle {
+		display: none;
+	}
+
+	header {
+		display: grid;
+		grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+
+	}
+
+	.logo {
+		grid-column: 2 / 3;
+	}
+
+	nav {
+		all: unset;
+		grid-column: 3 / 4;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+
+	nav li {
+		transform: scale(1, 1) !important;
+		margin: 0;
+		padding-left: 2.5em;
+	}
+
+	nav ul {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+}
+/* ------------------------ */
+
+/* --- REST OF THE PAGE --- */
+/* CURRENTLY NOT RESPONSIVE */
+
+.room-search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	width: 35%;
+	height: 30%;
+	background: rgba(34, 40, 40, 0.82);
+	position: absolute;
+	top: calc(50% - (30% / 2));
+	left: calc(50% - (35% / 2));
+	border-style: hidden;
+	border-radius: 9px;
+	transform: skew(20deg);
+}
+
+form {
+	transform: skew(-20deg);
+}
+
+.selectors {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.selectors select {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: #468fa6;;
+	color: white;
+	padding: 1em;
+	border-radius: 3px;
+	margin: .6em;
+}
+
+.selectors select:hover {
+	color: black;
+	cursor: pointer;
+	background: #46b9dd;
+}
+
+.selectors select:first-child {
+
+}
+
+.dates {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dates input {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: #468fa6;;
+	color: white;
+	padding: 1em;
+	border-radius: 3px;
+	margin: .6em;
+}
+
+.dates input:hover {
+	color: black;
+	cursor: pointer;
+	background: #46b9dd;
+}
+
+/* ------------------------ */
